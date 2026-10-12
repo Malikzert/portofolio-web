@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout title="Abdul Malik Adz-Dzikri | Informatika">
+	<main>
+		<Hero />
+		<About />
+		<Projects />
+		<Contact />
+	</main>
+</Layout>
+
+<script>
+	let currentSlide = 0;
+
+	function moveCarousel(direction: string) {
+		const track = document.getElementById('projectTrack');
+		const cards = document.querySelectorAll('.project-card');
+		if (!track || cards.length === 0) return;
+
+		const cardWidth = (cards[0] as HTMLElement).offsetWidth + 32;
+		const visibleWidth = (track.parentElement as HTMLElement).offsetWidth;
+		const maxSlides = cards.length - Math.floor(visibleWidth / cardWidth);
+
+		if (direction === 'next' && currentSlide < maxSlides) {
+			currentSlide++;
+		} else if (direction === 'prev' && currentSlide > 0) {
+			currentSlide--;
+		}
+
+		track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+	}
+
+	document.addEventListener('click', function(e: MouseEvent) {
+		const target = e.target as HTMLElement;
+		if (target.closest('#nextBtn')) moveCarousel('next');
+		if (target.closest('#prevBtn')) moveCarousel('prev');
+	});
+
+	function handleScroll() {
+		const reveals = document.querySelectorAll('.reveal, section');
+		for (let i = 0; i < reveals.length; i++) {
+			const element = reveals[i] as HTMLElement;
+			const windowHeight = window.innerHeight;
+			const elementTop = element.getBoundingClientRect().top;
+			const elementVisible = 150;
+			
+			if (elementTop < windowHeight - elementVisible) {
+				element.classList.add('active');
+			}
+		}
+
+		const scrolled = window.pageYOffset;
+		document.body.style.setProperty('--scroll-y', scrolled + 'px');
+	}
+
+	window.addEventListener('scroll', handleScroll);
+	handleScroll();
+</script>

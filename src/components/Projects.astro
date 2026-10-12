@@ -1,0 +1,40 @@
+---
+import { projects } from '../data/projects.js';
+---
+
+<section id="projects" class="py-24 w-full">
+    <div class="container w-full max-w-[1200px] mx-auto px-5">
+        <div class="section-header text-center mb-12">
+            <p class="small">Portofolio Kerja</p>
+            <h2 class="section-title">Selected <span>Projects</span></h2>
+        </div>
+
+        <div class="relative">
+            <button class="carousel-btn prev" id="prevBtn">
+                <i class="fas fa-chevron-left text-dark"></i>
+            </button>
+            <button class="carousel-btn next" id="nextBtn">
+                <i class="fas fa-chevron-right text-dark"></i>
+            </button>
+
+            <div class="carousel-wrapper overflow-hidden">
+                <div class="project-track flex gap-8 transition-transform duration-500" id="projectTrack">
+                    {projects.map((project) => (
+                        <div class="project-card min-w-[calc(33.333%-20px)]">
+                            <div class="project-img-wrapper">
+                                <img src={project.image} alt={project.title}>
+                                <div class="project-overlay">
+                                    <a href={`${import.meta.env.BASE_URL}projects/${project.slug}`} class="btn">Details</a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="category">{project.category}</span>
+                                <h3>{project.title}</h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

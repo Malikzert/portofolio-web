@@ -1,0 +1,381 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="ElectroShop - Toko Elektronik | Abdul Malik Adz-Dzikri">
+  <main class="pt-24 min-h-screen">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-gray-400 hover:text-gold transition mb-8">
+        <i class="fas fa-arrow-left"></i>
+        <span class="text-sm font-bold uppercase tracking-widest">Back to Home</span>
+      </a>
+
+      <div class="bg-white/5 border border-white/10 rounded-3xl relative overflow-hidden">
+        <div class="absolute -top-32 -right-32 w-80 h-80 bg-gold/10 blur-[120px] rounded-full"></div>
+        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+        <div class="relative z-10 p-8 md:p-12">
+          <header class="mb-10">
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full uppercase tracking-wider">Completed</span>
+              <span class="px-3 py-1 bg-white/10 text-gray-400 text-xs font-semibold rounded-full uppercase tracking-wider">E-Commerce</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">ElectroShop</h1>
+            <p class="text-gray-400 text-lg max-w-2xl">
+              Platform toko elektronik modern dengan fitur lengkap untuk pengalaman belanja online yang optimal.
+            </p>
+          </header>
+
+          <section class="mb-12">
+            <div class="aspect-video rounded-2xl overflow-hidden border border-white/10 mb-10 shadow-2xl shadow-gold/5">
+              <img src={`${import.meta.env.BASE_URL}img/elek.png`} alt="ElectroShop Main Preview" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+            </div>
+
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <i class="fas fa-images text-gold"></i>
+              <span>Gallery</span>
+            </h2>
+            
+            <div class="carousel-wrapper relative group">
+              <button class="carousel-nav-btn carousel-prev left-2" aria-label="Previous">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              
+              <div class="carousel-container">
+                <div class="carousel-track">
+                  <div class="carousel-item">
+                    <div class="carousel-card">
+                      <img src={`${import.meta.env.BASE_URL}img/elek1.png`} alt="Product Catalog" class="carousel-img">
+                      <div class="carousel-overlay">
+                        <span>Product Catalog</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-card">
+                      <img src={`${import.meta.env.BASE_URL}img/elek2.png`} alt="Shopping Cart" class="carousel-img">
+                      <div class="carousel-overlay">
+                        <span>Shopping Cart</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-card">
+                      <img src={`${import.meta.env.BASE_URL}img/elek3.png`} alt="Checkout Page" class="carousel-img">
+                      <div class="carousel-overlay">
+                        <span>Checkout Page</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-card">
+                      <img src={`${import.meta.env.BASE_URL}img/elek4.png`} alt="Admin Dashboard" class="carousel-img">
+                      <div class="carousel-overlay">
+                        <span>Admin Dashboard</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-nav-btn carousel-next right-2" aria-label="Next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              Deskripsi Proyek
+            </h2>
+            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
+              <p class="text-gray-300 leading-relaxed">
+                ElectroShop adalah platform e-commerce yang dibangun untuk memenuhi kebutuhan toko elektronik dalam menjual produk secara online. Dengan antarmuka yang intuitif dan responsif, pelanggan dapat dengan mudah menelusuri katalog produk, menambahkan ke keranjang, dan melakukan checkout dengan aman. Sistem ini juga dilengkapi dengan dashboard admin untuk mengelola produk, pesanan, dan laporan penjualan.
+              </p>
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              Teknologi yang Digunakan
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
+                <p class="text-gray-300 text-sm">HTML5</p>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fab fa-css3-alt text-3xl text-blue-500 mb-2"></i>
+                <p class="text-gray-300 text-sm">CSS3</p>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fab fa-js text-3xl text-yellow-500 mb-2"></i>
+                <p class="text-gray-300 text-sm">JavaScript</p>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fab fa-php text-3xl text-purple-500 mb-2"></i>
+                <p class="text-gray-300 text-sm">PHP Native</p>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fas fa-database text-3xl text-green-500 mb-2"></i>
+                <p class="text-gray-300 text-sm">MySQL</p>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fab fa-bootstrap text-3xl text-purple-400 mb-2"></i>
+                <p class="text-gray-300 text-sm">Bootstrap</p>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fas fa-code text-3xl text-gray-400 mb-2"></i>
+                <p class="text-gray-300 text-sm">Figma</p>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-gold/30 transition">
+                <i class="fab fa-font-awesome text-3xl text-green-400 mb-2"></i>
+                <p class="text-gray-300 text-sm">FontAwesome</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              Fitur Utama
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-gold/30 transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center text-gold">
+                    <i class="fas fa-sign-in-alt"></i>
+                  </div>
+                  <h3 class="text-white font-semibold">Login System</h3>
+                </div>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-gold/30 transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center text-gold">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+                  <h3 class="text-white font-semibold">Shopping Cart</h3>
+                </div>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-gold/30 transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center text-gold">
+                    <i class="fas fa-cogs"></i>
+                  </div>
+                  <h3 class="text-white font-semibold">CRUD Product</h3>
+                </div>
+              </div>
+              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-gold/30 transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center text-gold">
+                    <i class="fas fa-credit-card"></i>
+                  </div>
+                  <h3 class="text-white font-semibold">Checkout</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              Kontribusi Saya
+            </h2>
+            <div class="bg-gradient-to-r from-gold/10 to-transparent border border-gold/20 p-6 rounded-2xl">
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <span class="text-gray-300"><strong class="text-white">Full-stack Development:</strong> Mengembangkan seluruh fitur website dari frontend hingga backend menggunakan PHP Native dan MySQL.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <span class="text-gray-300"><strong class="text-white">Database Design:</strong> Merancang dan mengoptimalkan struktur database MySQL untuk efisiensi penyimpanan dan query.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <span class="text-gray-300"><strong class="text-white">UI/UX Design:</strong> Mendesain antarmuka pengguna yang intuitif dan menarik menggunakan Figma sebelum implementasi kode.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <span class="text-gray-300"><strong class="text-white">Deployment:</strong> Mengatur hosting dan deployment aplikasi agar dapat diakses secara online.</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <div class="flex flex-wrap gap-4 pt-8 border-t border-white/10">
+            <a href="https://www.youtube.com/watch?v=DBatILReSUA&t=1082s" target="_blank" class="btn-demo flex items-center gap-3">
+              <i class="fab fa-youtube text-xl"></i>
+              <span>Watch Demo</span>
+            </a>
+            <a href="https://github.com/Malikzert/ElektroShop" target="_blank" class="btn-github flex items-center gap-3">
+              <i class="fab fa-github text-xl"></i>
+              <span>Source Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+    const track = wrapper.querySelector('.carousel-track');
+    const prevBtn = wrapper.querySelector('.carousel-prev');
+    const nextBtn = wrapper.querySelector('.carousel-next');
+    const itemWidth = 280;
+    const gap = 24;
+    let scrollPosition = 0;
+
+    prevBtn?.addEventListener('click', () => {
+      scrollPosition = Math.max(scrollPosition - (itemWidth + gap), 0);
+      track?.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      const maxScroll = (track?.scrollWidth || 0) - (track?.clientWidth || 0);
+      scrollPosition = Math.min(scrollPosition + (itemWidth + gap), maxScroll);
+      track?.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    });
+  });
+</script>
+
+<style>
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  .carousel-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px 0;
+  }
+
+  .carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 0;
+    padding: 0 4px;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 0 12px;
+  }
+
+  .carousel-card {
+    position: relative;
+    width: 280px;
+    aspect-ratio: 9/16;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .carousel-card:hover .carousel-img {
+    transform: scale(1.1);
+  }
+
+  .carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .carousel-card:hover .carousel-overlay {
+    opacity: 1;
+  }
+
+  .carousel-overlay span {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .carousel-wrapper:hover .carousel-nav-btn {
+    opacity: 1;
+  }
+
+  .carousel-nav-btn:hover {
+    background: rgba(245, 230, 168, 0.2);
+    border-color: var(--color-gold, #f5e6a8);
+  }
+
+  .btn-demo {
+    padding: 14px 28px;
+    background: #ff0000;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .btn-demo:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+  }
+
+  .btn-github {
+    padding: 14px 28px;
+    background: #333;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .btn-github:hover {
+    background: #555;
+    transform: translateY(-2px);
+  }
+</style>

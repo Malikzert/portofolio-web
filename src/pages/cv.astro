@@ -1,0 +1,343 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				font-family: 'Inter', sans-serif;
+				background: #ffffff;
+				color: #1a1a1a;
+				line-height: 1.6;
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+			}
+
+			@media print {
+				.no-print { display: none !important; }
+				body { padding: 0; margin: 0; }
+				.cv-container { padding: 0 !important; max-width: 100% !important; }
+			}
+		</style>
+	</head>
+	<body>
+		<main class="cv-container">
+			<header class="cv-header">
+				<h1>Abdul Malik Adz-Dzikri</h1>
+				<p class="cv-title">Informatika / Web Developer</p>
+				<div class="cv-contact">
+					<span>WhatsApp: +62 852-5926-4009</span>
+					<span class="separator">|</span>
+					<span>Email: malikdark17@gmail.com</span>
+					<span class="separator">|</span>
+					<span>GitHub: Malikzert</span>
+					<span class="separator">|</span>
+					<span>Instagram: @malikzert</span>
+				</div>
+			</header>
+
+			<section class="cv-section">
+				<h2>Summary</h2>
+				<p>
+					Mahasiswa Informatika yang berdedikasi menciptakan solusi digital efisien, fokus pada 
+					pengembangan web modern, dan pemecahan masalah teknis.
+				</p>
+			</section>
+
+			<section class="cv-section">
+				<h2>Skills</h2>
+				
+				<div class="skill-group">
+					<h3>Advanced</h3>
+					<div class="skill-badges">
+						<span class="badge badge-advanced">HTML5 - Advanced</span>
+						<span class="badge badge-advanced">CSS3 - Advanced</span>
+						<span class="badge badge-advanced">Python - Advanced</span>
+						<span class="badge badge-advanced">Modern UI Design - Advanced</span>
+					</div>
+				</div>
+
+				<div class="skill-group">
+					<h3>Intermediate</h3>
+					<div class="skill-badges">
+						<span class="badge badge-intermediate">JavaScript - Intermediate</span>
+						<span class="badge badge-intermediate">React - Intermediate</span>
+						<span class="badge badge-intermediate">Laravel - Intermediate</span>
+						<span class="badge badge-intermediate">MySQL - Intermediate</span>
+						<span class="badge badge-intermediate">PHP - Intermediate</span>
+						<span class="badge badge-intermediate">C# - Intermediate</span>
+					</div>
+				</div>
+
+				<div class="skill-group">
+					<h3>Beginner / Learning</h3>
+					<div class="skill-badges">
+						<span class="badge badge-learning">Astro Framework - Learning</span>
+						<span class="badge badge-learning">Debian - Beginner</span>
+						<span class="badge badge-learning">Linux Mint - Beginner</span>
+						<span class="badge badge-learning">Git/GitHub - Beginner</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="cv-section">
+				<h2>Education</h2>
+				<div class="cv-entry">
+					<div class="cv-entry-header">
+						<h3>S1 Teknik Informatika</h3>
+						<span class="cv-date">2023 - Sekarang</span>
+					</div>
+					<p class="cv-location">Fokus pada Web Development & Software Engineering</p>
+				</div>
+			</section>
+
+			<section class="cv-section">
+				<h2>Projects</h2>
+				
+				<div class="cv-entry">
+					<div class="cv-entry-header">
+						<h3>Elektroshop</h3>
+						<span class="cv-date">2024</span>
+					</div>
+					<ul>
+						<li>Platform e-commerce untuk penjualan produk elektronik</li>
+						<li>Implementasi sistem keranjang belanja dan pembayaran</li>
+						<li>Desain responsif dengan antarmuka pengguna yang modern</li>
+					</ul>
+				</div>
+
+				<div class="cv-entry">
+					<div class="cv-entry-header">
+						<h3>Ular Tangga</h3>
+						<span class="cv-date">2024</span>
+					</div>
+					<ul>
+						<li>Game ular tangga dengan fitur pembelajaran interaktif</li>
+						<li>Implementasi logika permainan dan AI sederhana</li>
+						<li>Menggunakan Python dan Pygame</li>
+					</ul>
+				</div>
+
+				<div class="cv-entry">
+					<div class="cv-entry-header">
+						<h3>Neural Network</h3>
+						<span class="cv-date">2024</span>
+					</div>
+					<ul>
+						<li>Proyek pengenalan tulisan tangan menggunakan deep learning</li>
+						<li>Training model neural network dengan dataset MNIST</li>
+						<li>Implementasi Convolutional Neural Network (CNN)</li>
+					</ul>
+				</div>
+			</section>
+
+			<div class="cv-actions no-print">
+				<button onclick="window.print()" class="btn">Print / Save as PDF</button>
+			</div>
+		</main>
+	</body>
+</html>
+
+<style>
+	.cv-container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 50px 40px;
+	}
+
+	.cv-header {
+		margin-bottom: 35px;
+		padding-bottom: 25px;
+		border-bottom: 2px solid #1a1a1a;
+	}
+
+	.cv-header h1 {
+		font-size: 2.2rem;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin-bottom: 5px;
+	}
+
+	.cv-title {
+		font-size: 1.2rem;
+		color: #444;
+		margin-bottom: 15px;
+		font-weight: 500;
+	}
+
+	.cv-contact {
+		font-size: 0.9rem;
+		color: #333;
+	}
+
+	.cv-contact .separator {
+		margin: 0 10px;
+		color: #999;
+	}
+
+	.cv-section {
+		margin-bottom: 30px;
+	}
+
+	.cv-section h2 {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: #1a1a1a;
+		margin-bottom: 15px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid #e0e0e0;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.cv-section > p {
+		color: #333;
+		text-align: justify;
+	}
+
+	.skill-group {
+		margin-bottom: 18px;
+	}
+
+	.skill-group h3 {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #555;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.skill-badges {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.badge {
+		padding: 6px 14px;
+		border-radius: 4px;
+		font-size: 0.8rem;
+		font-weight: 500;
+		border: 1px solid;
+	}
+
+	.badge-advanced {
+		background: #1a1a1a;
+		color: #fff;
+		border-color: #1a1a1a;
+	}
+
+	.badge-intermediate {
+		background: #f5f5f5;
+		color: #1a1a1a;
+		border-color: #ccc;
+	}
+
+	.badge-learning {
+		background: #fff;
+		color: #666;
+		border-color: #ddd;
+	}
+
+	.cv-entry {
+		margin-bottom: 20px;
+	}
+
+	.cv-entry-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 8px;
+	}
+
+	.cv-entry-header h3 {
+		font-size: 1rem;
+		font-weight: 600;
+		color: #1a1a1a;
+	}
+
+	.cv-date {
+		font-size: 0.85rem;
+		color: #666;
+	}
+
+	.cv-location {
+		font-size: 0.9rem;
+		color: #555;
+		margin-top: -5px;
+	}
+
+	.cv-entry ul {
+		margin: 0;
+		padding-left: 20px;
+	}
+
+	.cv-entry ul li {
+		color: #333;
+		margin-bottom: 5px;
+	}
+
+	.cv-actions {
+		text-align: center;
+		margin-top: 40px;
+		padding-top: 25px;
+	}
+
+	.btn {
+		padding: 12px 30px;
+		background: #1a1a1a;
+		color: #fff;
+		border: none;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 500;
+		cursor: pointer;
+		font-family: 'Inter', sans-serif;
+		transition: background 0.2s;
+	}
+
+	.btn:hover {
+		background: #333;
+	}
+
+	@media (max-width: 600px) {
+		.cv-container {
+			padding: 30px 20px;
+		}
+
+		.cv-header h1 {
+			font-size: 1.6rem;
+		}
+
+		.cv-entry-header {
+			flex-direction: column;
+		}
+
+		.cv-contact {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		.cv-contact .separator {
+			display: none;
+		}
+	}
+</style>
