@@ -5,12 +5,12 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Simple Web Search Engine | Abdul Malik Adz-Dzikri">
   <main class="pt-24 min-h-screen">
     <div class="max-w-6xl mx-auto px-6 py-12">
-      <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-gray-400 hover:text-gold transition mb-8">
+      <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gold transition mb-8">
         <i class="fas fa-arrow-left"></i>
         <span class="text-sm font-bold uppercase tracking-widest">Back to Home</span>
       </a>
 
-      <div class="bg-white/5 border border-white/10 rounded-3xl relative overflow-hidden">
+      <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-3xl relative overflow-hidden">
         <div class="absolute -top-32 -right-32 w-80 h-80 bg-blue-500/10 blur-[120px] rounded-full"></div>
         <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-gold/10 blur-[120px] rounded-full"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/5 blur-[100px] rounded-full"></div>
@@ -19,16 +19,16 @@ import Layout from '../../layouts/Layout.astro';
           <header class="mb-10">
             <div class="flex flex-wrap items-center gap-3 mb-4">
               <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full uppercase tracking-wider">Completed</span>
-              <span class="px-3 py-1 bg-white/10 text-gray-400 text-xs font-semibold rounded-full uppercase tracking-wider">Web Development</span>
+              <span class="px-3 py-1 bg-black/5 dark:bg-white/10 text-gray-600 dark:text-gray-400 text-xs font-semibold rounded-full uppercase tracking-wider">Web Development</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Simple Web Search Engine</h1>
-            <p class="text-gray-400 text-lg max-w-2xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Simple Web Search Engine</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
               Pengembangan mesin pencari web sederhana yang berfokus pada efisiensi indexing dan akurasi pencarian kata kunci menggunakan logika pemrosesan teks.
             </p>
           </header>
 
           <section class="mb-12">
-            <div class="aspect-video rounded-2xl overflow-hidden border border-white/10 mb-10 shadow-2xl shadow-blue-500/10">
+            <div class="aspect-video rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 mb-10 shadow-2xl shadow-blue-500/10">
               <img src={`${import.meta.env.BASE_URL}img/se (1).png`} alt="Search Engine Main Preview" class="w-full h-full object-cover hover:scale-105 transition duration-700">
             </div>
 
@@ -37,7 +37,7 @@ import Layout from '../../layouts/Layout.astro';
               <span class="text-blue-400 text-xs font-mono">Text Processing Engine</span>
             </div>
 
-            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2 mt-6">
               <i class="fas fa-images text-gold"></i>
               <span>Gallery Insight</span>
             </h2>
@@ -107,19 +107,19 @@ import Layout from '../../layouts/Layout.astro';
           </section>
 
           <section class="mb-12">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
               <span class="w-1 h-8 bg-gold rounded-full"></span>
               Deskripsi Proyek
             </h2>
-            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <p class="text-gray-300 leading-relaxed">
+            <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-6 rounded-2xl">
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                 Simple Web Search Engine adalah proyek yang dibangun untuk memahami fondasi teknologi mesin pencarian. Proyek ini mengimplementasikan <span class="font-mono text-blue-400">inverted index</span> untuk pengindeksan dokumen secara efisien, dengan algoritma <span class="font-mono text-green-400">TF-IDF</span> untuk menentukan relevansi hasil pencarian. Sistem ini mampu memproses kueri pengguna dan mengembalikan hasil yang terurut berdasarkan tingkat kesamaan dengan menggunakan teknik <span class="font-mono text-yellow-400">cosine similarity</span>.
               </p>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
               <span class="w-1 h-8 bg-gold rounded-full"></span>
               Technology Stack
             </h2>
@@ -147,90 +147,90 @@ import Layout from '../../layouts/Layout.astro';
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-blue-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-blue-500/30 transition hover:scale-105">
                 <i class="fab fa-python text-3xl text-blue-500 mb-2"></i>
-                <p class="text-gray-300 text-sm font-mono">Python</p>
+                <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">Python</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-yellow-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-yellow-500/30 transition hover:scale-105">
                 <i class="fab fa-js text-3xl text-yellow-500 mb-2"></i>
-                <p class="text-gray-300 text-sm font-mono">JavaScript</p>
+                <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">JavaScript</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-orange-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-orange-500/30 transition hover:scale-105">
                 <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
-                <p class="text-gray-300 text-sm font-mono">HTML5</p>
+                <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">HTML5</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center hover:border-blue-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-blue-500/30 transition hover:scale-105">
                 <i class="fab fa-css3 text-3xl text-blue-500 mb-2"></i>
-                <p class="text-gray-300 text-sm font-mono">CSS3</p>
+                <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">CSS3</p>
               </div>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
               <span class="w-1 h-8 bg-gold rounded-full"></span>
               Fitur Utama
             </h2>
             <div class="grid md:grid-cols-2 gap-4">
-              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-blue-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-blue-500/30 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400">
                     <i class="fas fa-list-ol"></i>
                   </div>
-                  <h3 class="text-white font-semibold font-mono text-sm">Inverted Index</h3>
+                  <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Inverted Index</h3>
                 </div>
-                <p class="text-gray-500 text-xs mt-2 ml-13">Sistem pengindeksan dokumen untuk pencarian cepat</p>
+                <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Sistem pengindeksan dokumen untuk pencarian cepat</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-green-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-green-500/30 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center text-green-400">
                     <i class="fas fa-calculator"></i>
                   </div>
-                  <h3 class="text-white font-semibold font-mono text-sm">TF-IDF Scoring</h3>
+                  <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">TF-IDF Scoring</h3>
                 </div>
-                <p class="text-gray-500 text-xs mt-2 ml-13">Algoritma pembobotan istilah untuk relevansi</p>
+                <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Algoritma pembobotan istilah untuk relevansi</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-yellow-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-yellow-500/30 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center text-yellow-400">
                     <i class="fas fa-project-diagram"></i>
                   </div>
-                  <h3 class="text-white font-semibold font-mono text-sm">Cosine Similarity</h3>
+                  <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Cosine Similarity</h3>
                 </div>
-                <p class="text-gray-500 text-xs mt-2 ml-13">Pengukuran kesamaan antara query dan dokumen</p>
+                <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Pengukuran kesamaan antara query dan dokumen</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-purple-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-purple-500/30 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400">
                     <i class="fas fa-magic"></i>
                   </div>
-                  <h3 class="text-white font-semibold font-mono text-sm">Text Preprocessing</h3>
+                  <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Text Preprocessing</h3>
                 </div>
-                <p class="text-gray-500 text-xs mt-2 ml-13">Tokenization, stemming, dan stopword removal</p>
+                <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Tokenization, stemming, dan stopword removal</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-red-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-red-500/30 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400">
                     <i class="fas fa-bolt"></i>
                   </div>
-                  <h3 class="text-white font-semibold font-mono text-sm">Fast Query Processing</h3>
+                  <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Fast Query Processing</h3>
                 </div>
-                <p class="text-gray-500 text-xs mt-2 ml-13">Optimasi performa untuk respons cepat</p>
+                <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Optimasi performa untuk respons cepat</p>
               </div>
-              <div class="bg-white/5 border border-white/10 p-5 rounded-2xl hover:border-cyan-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-cyan-500/30 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400">
                     <i class="fas fa-desktop"></i>
                   </div>
-                  <h3 class="text-white font-semibold font-mono text-sm">Clean UI</h3>
+                  <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Clean UI</h3>
                 </div>
-                <p class="text-gray-500 text-xs mt-2 ml-13">Antarmuka pengguna yang responsif dan intuitif</p>
+                <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Antarmuka pengguna yang responsif dan intuitif</p>
               </div>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
               <span class="w-1 h-8 bg-gold rounded-full"></span>
               Kontribusi Saya
             </h2>
@@ -238,35 +238,35 @@ import Layout from '../../layouts/Layout.astro';
               <ul class="space-y-4">
                 <li class="flex items-start gap-3">
                   <i class="fas fa-check-circle text-gold mt-1"></i>
-                  <span class="text-gray-300"><strong class="text-white font-mono text-sm">Backend Logic (Indexing Algorithm):</strong> Mengembangkan sistem inverted index dari nol menggunakan Python, implementasi TF-IDF untuk scoring dokumen.</span>
+                  <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Backend Logic (Indexing Algorithm):</strong> Mengembangkan sistem inverted index dari nol menggunakan Python, implementasi TF-IDF untuk scoring dokumen.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <i class="fas fa-check-circle text-gold mt-1"></i>
-                  <span class="text-gray-300"><strong class="text-white font-mono text-sm">Frontend UI/UX:</strong> Merancang dan mengimplementasikan antarmuka pengguna yang bersih dan responsif menggunakan HTML5, CSS3, dan JavaScript native.</span>
+                  <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Frontend UI/UX:</strong> Merancang dan mengimplementasikan antarmuka pengguna yang bersih dan responsif menggunakan HTML5, CSS3, dan JavaScript native.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <i class="fas fa-check-circle text-gold mt-1"></i>
-                  <span class="text-gray-300"><strong class="text-white font-mono text-sm">Query Optimization:</strong> Mengoptimasi algoritma pencarian untuk mengurangi latency dan meningkatkan akurasi hasil pencarian dengan cosine similarity.</span>
+                  <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Query Optimization:</strong> Mengoptimasi algoritma pencarian untuk mengurangi latency dan meningkatkan akurasi hasil pencarian dengan cosine similarity.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <i class="fas fa-check-circle text-gold mt-1"></i>
-                  <span class="text-gray-300"><strong class="text-white font-mono text-sm">Text Processing:</strong> Mengimplementasikan pipeline pemrosesan teks meliputi tokenization, case folding, stopword removal, dan stemming.</span>
+                  <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Text Processing:</strong> Mengimplementasikan pipeline pemrosesan teks meliputi tokenization, case folding, stopword removal, dan stemming.</span>
                 </li>
               </ul>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
               <span class="w-1 h-8 bg-gold rounded-full"></span>
               Tantangan Teknis
             </h2>
-            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <p class="text-gray-300 leading-relaxed">
-                Tantangan utama dalam proyek ini adalah membangun sistem yang mampu mengindex ribuan dokumen dengan waktu respons yang cepat. Saya mengatasi masalah ini dengan mengimplementasikan <strong class="text-white font-mono text-sm">dictionary-based indexing</strong> yang mengurangi kompleksitas waktu dari O(n) menjadi O(1) untuk operasi lookup. Selain itu, pemilihan <strong class="text-white font-mono text-sm">cosine similarity</strong> sebagai metrik relevansi memastikan hasil pencarian yang akurat berdasarkan bobot TF-IDF setiap istilah dalam dokumen.
+            <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-6 rounded-2xl">
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                Tantangan utama dalam proyek ini adalah membangun sistem yang mampu mengindex ribuan dokumen dengan waktu respons yang cepat. Saya mengatasi masalah ini dengan mengimplementasikan <strong class="text-gray-900 dark:text-white font-mono text-sm">dictionary-based indexing</strong> yang mengurangi kompleksitas waktu dari O(n) menjadi O(1) untuk operasi lookup. Selain itu, pemilihan <strong class="text-gray-900 dark:text-white font-mono text-sm">cosine similarity</strong> sebagai metrik relevansi memastikan hasil pencarian yang akurat berdasarkan bobot TF-IDF setiap istilah dalam dokumen.
               </p>
-              <div class="mt-4 p-4 bg-black/30 rounded-lg border border-white/5">
-                <p class="text-xs text-gray-500 font-mono">
+              <div class="mt-4 p-4 bg-black/30 rounded-lg border border-black/10 dark:border-white/5">
+                <p class="text-xs text-gray-600 dark:text-gray-500 font-mono">
                   <span class="text-green-400"># Keyword: TF-IDF, Inverted Index, Cosine Similarity</span><br>
                   <span class="text-blue-400"># Text Processing: Tokenization, Stemming, Stopwords</span>
                 </p>
@@ -274,7 +274,7 @@ import Layout from '../../layouts/Layout.astro';
             </div>
           </section>
 
-          <div class="flex flex-wrap gap-4 pt-8 border-t border-white/10">
+          <div class="flex flex-wrap gap-4 pt-8 border-t border-black/10 dark:border-white/10">
             <a href="https://github.com/Malikzert/Searchengine" target="_blank" class="btn-github flex items-center gap-3">
               <i class="fab fa-github text-xl"></i>
               <span>Source Code</span>

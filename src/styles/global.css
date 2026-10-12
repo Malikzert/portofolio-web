@@ -1,10 +1,27 @@
 :root {
     --accent: #f5e6a8;
+    --bg-dark: #ffffff;
+    --bg: #ffffff;
+    --text-white: #1a1a1a;
+    --text: #1a1a1a;
+    --text-dim: #555555;
+    --glass: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.10);
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-strong: rgba(0, 0, 0, 0.07);
+}
+
+html.dark {
+    --accent: #f5e6a8;
     --bg-dark: #050508;
+    --bg: #050508;
     --text-white: #ffffff;
+    --text: #ffffff;
     --text-dim: #888888;
     --glass: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
+    --surface: rgba(255, 255, 255, 0.03);
+    --surface-strong: rgba(255, 255, 255, 0.06);
 }
 
 * {
@@ -29,6 +46,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::before, body::after {
@@ -56,6 +74,11 @@ body::after {
     right: -10%;
     background: radial-gradient(circle, var(--accent), transparent);
     animation: floating 20s infinite alternate-reverse;
+}
+
+html:not(.dark) body::before,
+html:not(.dark) body::after {
+    opacity: 0.10;
 }
 
 body::before {
@@ -115,7 +138,7 @@ body::after {
 .btn.outline {
     background: transparent;
     color: var(--text-white);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
 }
 
 .btn:hover {
@@ -156,7 +179,7 @@ body::after {
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
 .project-img-wrapper {
@@ -210,7 +233,7 @@ body::after {
 .project-info h3 {
     font-size: 1.25rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: var(--text-white);
 }
 
 .project-info p {
@@ -256,7 +279,7 @@ body::after {
 
 .skill-bar {
     height: 4px;
-    background: rgba(255,255,255,0.05);
+    background: var(--surface);
     border-radius: 2px;
 }
 
@@ -272,9 +295,9 @@ body::after {
 .input-group input, .input-group textarea {
     width: 100%;
     padding: 15px;
-    background: rgba(255,255,255,0.03);
+    background: var(--surface);
     border: 1px solid var(--glass-border);
-    color: #fff;
+    color: var(--text-white);
     border-radius: 12px;
     outline: none;
     font-family: inherit;
@@ -283,7 +306,7 @@ body::after {
 
 .input-group input:focus, .input-group textarea:focus {
     border-color: var(--accent);
-    background: rgba(255,255,255,0.06);
+    background: var(--surface-strong);
 }
 
 @media (max-width: 968px) {

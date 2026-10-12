@@ -34,10 +34,42 @@ const { title } = Astro.props;
 				}
 			}
 		</script>
+		<script is:inline data-astro-rerun>
+			(function () {
+				var doc = document.documentElement;
+				var stored = null;
+				try { stored = localStorage.getItem('theme'); } catch (e) {}
+				var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+				var dark = stored ? stored === 'dark' : prefersDark;
+				doc.classList.toggle('dark', dark);
+
+				function syncIcons() {
+					var isDark = doc.classList.contains('dark');
+					var icons = document.querySelectorAll('[data-theme-icon]');
+					for (var i = 0; i < icons.length; i++) {
+						icons[i].classList.toggle('fa-moon', isDark);
+						icons[i].classList.toggle('fa-sun', !isDark);
+					}
+				}
+
+				if (!doc.__themeBound) {
+					doc.__themeBound = true;
+					document.addEventListener('click', function (e) {
+						var btn = e.target.closest ? e.target.closest('[data-theme-toggle]') : null;
+						if (!btn) return;
+						var isDark = doc.classList.toggle('dark');
+						try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (err) {}
+						syncIcons();
+					});
+				}
+
+				syncIcons();
+			})();
+		</script>
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="bg-dark text-gray-300 font-['Poppins'] overflow-x-hidden">
+	<body class="bg-white dark:bg-dark text-gray-700 dark:text-gray-300 font-['Poppins'] overflow-x-hidden">
 		<Header />
 		<slot />
 	</body>
