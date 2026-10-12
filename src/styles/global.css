@@ -74,6 +74,11 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Entry gate (only on first visit, never blocks returning clients) */
+html.intro-seen #intro-gate {
+    display: none !important;
+}
+
 /* Constellation starfield (no soft gradients) */
 body::before,
 body::after {

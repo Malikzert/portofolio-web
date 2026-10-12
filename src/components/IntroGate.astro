@@ -1,0 +1,49 @@
+---
+---
+<div id="intro-gate" role="dialog" aria-label="Selamat datang"
+     class="fixed inset-0 z-[100] flex items-center justify-center bg-[var(--background)] transition-opacity duration-700 opacity-100">
+    <div class="relative flex flex-col items-center text-center px-6">
+        <div class="relative flex items-center justify-center mb-8">
+            <div class="absolute w-64 h-64 md:w-72 md:h-72 rounded-full border border-neon/20 animate-spin [animation-duration:12s]"></div>
+            <div class="absolute w-[18rem] h-[18rem] md:w-[20rem] md:h-[20rem] rounded-full border border-dashed border-neon/10 animate-spin [animation-duration:20s] [animation-direction:reverse]"></div>
+            <img src={`${import.meta.env.BASE_URL}img/mlk.jpg`} alt="Abdul Malik Adz-Dzikri"
+                 class="relative w-40 h-40 md:w-52 md:h-52 object-cover border-2 border-neon/60 p-1 bg-black/5 dark:bg-neon/5 shadow-[0_10px_30px_rgba(32,41,56,0.15)] dark:shadow-[0_0_50px_rgba(61,255,245,0.25)] [clip-path:polygon(30%_0,100%_0,100%_70%,70%_100%,0_100%,0_30%)]">
+        </div>
+
+        <p class="small mb-3">// Welcome</p>
+        <h1 class="font-display text-3xl md:text-5xl font-extrabold uppercase tracking-tight leading-[1.1] text-gray-900 dark:text-white">
+            Abdul Malik<br>Adz-Dzikri
+        </h1>
+        <p class="mt-4 text-sm md:text-base text-gray-600 dark:text-gray-400 max-w-md">
+            Mahasiswa Informatika &amp; Web Developer
+        </p>
+
+        <button id="intro-enter" type="button" class="btn mt-10">Enter Portfolio</button>
+    </div>
+
+    <noscript><style>#intro-gate{display:none}</style></noscript>
+
+    <script is:inline>
+        (function () {
+            var gate = document.getElementById('intro-gate');
+            if (!gate) return;
+            if (document.documentElement.classList.contains('intro-seen')) return;
+
+            function dismiss() {
+                if (gate.dataset.closing) return;
+                gate.dataset.closing = '1';
+                try { localStorage.setItem('introSeen', '1'); } catch (e) {}
+                document.documentElement.classList.add('intro-seen');
+                gate.style.opacity = '0';
+                window.setTimeout(function () { gate.style.display = 'none'; }, 700);
+            }
+
+            var btn = document.getElementById('intro-enter');
+            if (btn) btn.addEventListener('click', dismiss);
+            gate.addEventListener('click', function (e) { if (e.target === gate) dismiss(); });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' || e.key === 'Enter') dismiss();
+            });
+        })();
+    </script>
+</div>
