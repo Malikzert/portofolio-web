@@ -4,22 +4,19 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout title="Ular Tangga 3D - Computer Graphics Project | Abdul Malik Adz-Dzikri">
   <main class="pt-24 min-h-screen">
-    <div class="max-w-6xl mx-auto px-6 py-12">
-      <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gold transition mb-8">
+    <div class="max-w-[1440px] mx-auto px-6 py-12">
+      <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-neon transition mb-8">
         <i class="fas fa-arrow-left"></i>
         <span class="text-sm font-bold uppercase tracking-widest">Back to Home</span>
       </a>
 
-      <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-3xl relative overflow-hidden">
-        <div class="absolute -top-32 -right-32 w-80 h-80 bg-blue-500/10 blur-[120px] rounded-full"></div>
-        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-gold/10 blur-[120px] rounded-full"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/5 blur-[100px] rounded-full"></div>
+      <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 [clip-path:polygon(28px_0,100%_0,100%_calc(100%_-_28px),calc(100%_-_28px)_100%,0_100%,0_28px)] relative overflow-hidden">
 
         <div class="relative z-10 p-8 md:p-12">
           <header class="mb-10">
             <div class="flex flex-wrap items-center gap-3 mb-4">
-              <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full uppercase tracking-wider">Completed</span>
-              <span class="px-3 py-1 bg-black/5 dark:bg-white/10 text-gray-600 dark:text-gray-400 text-xs font-semibold rounded-full uppercase tracking-wider">Computer Graphics</span>
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)] uppercase tracking-wider">Completed</span>
+              <span class="px-3 py-1 bg-black/5 dark:bg-neon/10 text-gray-600 dark:text-gray-400 text-xs font-semibold [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)] uppercase tracking-wider">Computer Graphics</span>
             </div>
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Ular Tangga 3D</h1>
             <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
@@ -28,17 +25,17 @@ import Layout from '../../layouts/Layout.astro';
           </header>
 
           <section class="mb-12">
-            <div class="aspect-video rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 mb-10 shadow-2xl shadow-blue-500/10">
+            <div class="aspect-video [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] overflow-hidden border border-black/10 dark:border-neon/20 mb-10 shadow-2xl shadow-neon/10">
               <img src={`${import.meta.env.BASE_URL}img/ular.png`} alt="Ular Tangga 3D Main Preview - Code::Blocks IDE" class="w-full h-full object-cover hover:scale-105 transition duration-700">
             </div>
 
-            <div class="mb-4 inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+            <div class="mb-4 inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)]">
               <i class="fas fa-microchip text-blue-400 text-xs"></i>
               <span class="text-blue-400 text-xs font-mono">Native Engine Render</span>
             </div>
 
             <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2 mt-6">
-              <i class="fas fa-images text-gold"></i>
+              <i class="fas fa-images text-neon"></i>
               <span>Gallery</span>
             </h2>
             
@@ -84,10 +81,10 @@ import Layout from '../../layouts/Layout.astro';
 
           <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              <span class="w-1 h-8 bg-neon [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]"></span>
               Deskripsi Proyek
             </h2>
-            <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-6 rounded-2xl">
+            <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-6 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)]">
               <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                 Ular Tangga 3D adalah aplikasi desktop yang dibangun menggunakan <span class="font-mono text-blue-400">C++</span> dengan library <span class="font-mono text-green-400">OpenGL</span> dan <span class="font-mono text-yellow-400">GLUT</span> sebagai antarmuka grafik. Berbeda dengan proyek web biasa, aplikasi ini berjalan native di sistem operasi dan mengakses langsung fungsi-fungsi grafika tingkat rendah. Papan permainan 3D dirender menggunakan primitive modeling, dengan implementasi penuh pencahayaan dinamis, material objek, dan kontrol kamera interaktif menggunakan fungsi <span class="font-mono text-purple-400">gluLookAt</span>.
               </p>
@@ -96,23 +93,23 @@ import Layout from '../../layouts/Layout.astro';
 
           <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              <span class="w-1 h-8 bg-neon [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]"></span>
               Technology Stack
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-blue-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-4 [clip-path:polygon(12px_0,100%_0,100%_calc(100%_-_12px),calc(100%_-_12px)_100%,0_100%,0_12px)] text-center hover:border-neon/60 transition hover:scale-105">
                 <i class="fas fa-code text-3xl text-blue-500 mb-2"></i>
                 <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">C++</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-red-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-4 [clip-path:polygon(12px_0,100%_0,100%_calc(100%_-_12px),calc(100%_-_12px)_100%,0_100%,0_12px)] text-center hover:border-neon/60 transition hover:scale-105">
                 <i class="fas fa-cube text-3xl text-red-500 mb-2"></i>
                 <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">OpenGL</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-yellow-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-4 [clip-path:polygon(12px_0,100%_0,100%_calc(100%_-_12px),calc(100%_-_12px)_100%,0_100%,0_12px)] text-center hover:border-neon/60 transition hover:scale-105">
                 <i class="fas fa-th-large text-3xl text-yellow-500 mb-2"></i>
                 <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">GLUT</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4 rounded-xl text-center hover:border-purple-500/30 transition hover:scale-105">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-4 [clip-path:polygon(12px_0,100%_0,100%_calc(100%_-_12px),calc(100%_-_12px)_100%,0_100%,0_12px)] text-center hover:border-neon/60 transition hover:scale-105">
                 <i class="fas fa-compact-disc text-3xl text-purple-500 mb-2"></i>
                 <p class="text-gray-700 dark:text-gray-300 text-sm font-mono">Code::Blocks</p>
               </div>
@@ -121,58 +118,58 @@ import Layout from '../../layouts/Layout.astro';
 
           <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              <span class="w-1 h-8 bg-neon [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]"></span>
               Fitur Utama
             </h2>
             <div class="grid md:grid-cols-2 gap-4">
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-blue-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-5 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] hover:border-neon/60 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400">
+                  <div class="w-10 h-10 bg-blue-500/10 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)] flex items-center justify-center text-blue-400">
                     <i class="fas fa-cubes"></i>
                   </div>
                   <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">3D Primitive Modeling</h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Papan, ular, dan tangga dirender dari primitive shapes</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-green-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-5 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] hover:border-neon/60 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center text-green-400">
+                  <div class="w-10 h-10 bg-green-500/10 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)] flex items-center justify-center text-green-400">
                     <i class="fas fa-eye"></i>
                   </div>
                   <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Camera Control</h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Implementasi gluLookAt untuk navigasi kamera 3D</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-yellow-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-5 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] hover:border-neon/60 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center text-yellow-400">
+                  <div class="w-10 h-10 bg-yellow-500/10 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)] flex items-center justify-center text-yellow-400">
                     <i class="fas fa-lightbulb"></i>
                   </div>
                   <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Lighting & Material</h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Penggunaan glLight dan glMaterial untuk efek kedalaman</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-purple-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-5 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] hover:border-neon/60 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400">
+                  <div class="w-10 h-10 bg-purple-500/10 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)] flex items-center justify-center text-purple-400">
                     <i class="fas fa-dice"></i>
                   </div>
                   <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Dice Algorithm</h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Random number generation untuk melempar dadu</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-red-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-5 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] hover:border-neon/60 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400">
+                  <div class="w-10 h-10 bg-red-500/10 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)] flex items-center justify-center text-red-400">
                     <i class="fas fa-snake"></i>
                   </div>
                   <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Snake Collision</h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-500 text-xs mt-2 ml-13">Deteksi tabrakan dan penurunan posisi</p>
               </div>
-              <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-5 rounded-2xl hover:border-cyan-500/30 transition hover:scale-[1.02]">
+              <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-5 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] hover:border-neon/60 transition hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400">
+                  <div class="w-10 h-10 bg-cyan-500/10 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)] flex items-center justify-center text-cyan-400">
                     <i class="fas fa-ladder"></i>
                   </div>
                   <h3 class="text-gray-900 dark:text-white font-semibold font-mono text-sm">Ladder Boost</h3>
@@ -184,25 +181,25 @@ import Layout from '../../layouts/Layout.astro';
 
           <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              <span class="w-1 h-8 bg-neon [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]"></span>
               Kontribusi Saya
             </h2>
-            <div class="bg-gradient-to-r from-blue-500/10 via-gold/10 to-purple-500/10 border border-gold/20 p-6 rounded-2xl">
+            <div class="bg-gradient-to-r from-blue-500/10 via-neon/10 to-purple-500/10 border border-neon/20 p-6 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)]">
               <ul class="space-y-4">
                 <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <i class="fas fa-check-circle text-neon mt-1"></i>
                   <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Full-stack C++ Developer:</strong> Mengembangkan seluruh aplikasi dari nol menggunakan C++ native dengan pendekatan pemrograman berorientasi objek.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <i class="fas fa-check-circle text-neon mt-1"></i>
                   <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Memory Management:</strong> Bertanggung jawab atas alokasi dan dealokasi memori secara manual untuk objek-objek 3D dalam rendering loop.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <i class="fas fa-check-circle text-neon mt-1"></i>
                   <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Graphics Pipeline:</strong> Mengimplementasikan pipeline rendering lengkap mulai dari vertex definition hingga fragment shading dengan OpenGL.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-gold mt-1"></i>
+                  <i class="fas fa-check-circle text-neon mt-1"></i>
                   <span class="text-gray-700 dark:text-gray-300"><strong class="text-gray-900 dark:text-white font-mono text-sm">Game Logic:</strong> Menulis algoritma pergerakan pion, random dadu, dan sistem koordinat (x, y, z) untuk validasi posisi.</span>
                 </li>
               </ul>
@@ -211,14 +208,14 @@ import Layout from '../../layouts/Layout.astro';
 
           <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span class="w-1 h-8 bg-gold rounded-full"></span>
+              <span class="w-1 h-8 bg-neon [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]"></span>
               Expertise
             </h2>
-            <div class="bg-gradient-to-r from-purple-500/5 to-blue-500/5 border border-black/10 dark:border-white/10 p-6 rounded-2xl">
+            <div class="bg-gradient-to-r from-purple-500/5 to-blue-500/5 border border-black/10 dark:border-neon/20 p-6 [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)]">
               <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                 Proyek ini menunjukkan kemampuan mendalam dalam <strong class="text-gray-900 dark:text-white font-mono text-sm">Computer Graphics</strong> dan <strong class="text-gray-900 dark:text-white font-mono text-sm">Object-Oriented Programming</strong> di C++. Ini bukan sekadar web design — ini adalah manipulasi grafis tingkat rendah yang membutuhkan pemahaman mendalam tentang coordinate systems, transformation matrices, lighting models, dan shading. Saya mengimplementasikan seluruh rendering tanpa game engine, mengakses OpenGL API secara langsung melalui GLUT, yang membuktikan kemampuan dalam low-level graphics programming.
               </p>
-              <div class="mt-4 p-4 bg-black/30 rounded-lg border border-black/10 dark:border-white/5">
+              <div class="mt-4 p-4 bg-black/30 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)] border border-black/10 dark:border-white/5">
                 <p class="text-xs text-gray-600 dark:text-gray-500 font-mono">
                   <span class="text-blue-400">#include</span> &lt;GL/gl.h&gt;<br>
                   <span class="text-blue-400">#include</span> &lt;GL/glu.h&gt;<br>
@@ -228,7 +225,7 @@ import Layout from '../../layouts/Layout.astro';
             </div>
           </section>
 
-          <div class="flex flex-wrap gap-4 pt-8 border-t border-black/10 dark:border-white/10">
+          <div class="flex flex-wrap gap-4 pt-8 border-t border-black/10 dark:border-neon/20">
             <a href="https://github.com/Malikzert/Ulartangga-3d" target="_blank" class="btn-github flex items-center gap-3">
               <i class="fab fa-github text-xl"></i>
               <span>Source Code</span>
@@ -296,16 +293,16 @@ import Layout from '../../layouts/Layout.astro';
     position: relative;
     width: 280px;
     aspect-ratio: 9/16;
-    border-radius: 16px;
+    clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 1px rgb(var(--accent-rgb) / 0.18), 0 8px 24px rgba(0,0,0,0.5);
   }
 
   .carousel-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 10px 20px rgb(var(--accent-rgb) / 0.3);
   }
 
   .carousel-img {
@@ -366,24 +363,27 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .carousel-nav-btn:hover {
-    background: rgba(245, 230, 168, 0.2);
-    border-color: var(--color-gold, #f5e6a8);
+    background: rgb(var(--accent-rgb) / 0.2);
+    border-color: var(--color-gold, var(--accent));
   }
+
+  html.dark .btn-github { color: #ffffff; }
 
   .btn-github {
     padding: 14px 28px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border: 1px solid rgba(245, 230, 168, 0.3);
-    color: white;
+    background: linear-gradient(135deg, rgb(var(--accent-rgb) / 0.14) 0%, rgb(var(--accent-rgb) / 0.02) 100%);
+    border: 1px solid rgb(var(--accent-rgb) / 0.3);
+    color: var(--foreground);
     border-radius: 12px;
     font-weight: 600;
     transition: all 0.3s;
   }
 
   .btn-github:hover {
+    color: #ffffff;
     background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
-    border-color: rgba(245, 230, 168, 0.6);
+    border-color: rgb(var(--accent-rgb) / 0.6);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(245, 230, 168, 0.1);
+    box-shadow: 0 10px 30px rgb(var(--accent-rgb) / 0.1);
   }
 </style>

@@ -18,7 +18,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		
 		<script is:inline>
@@ -26,9 +26,18 @@ const { title } = Astro.props;
 				theme: {
 					extend: {
 						colors: {
-							dark: '#050508',
-							accent: '#f5e6a8',
-							gold: '#f5e6a8',
+							dark: '#04040a',
+							neon: 'rgb(var(--accent-rgb) / <alpha-value>)',
+							accent: 'rgb(var(--accent-rgb) / <alpha-value>)',
+							gold: 'rgb(var(--accent-rgb) / <alpha-value>)',
+							cyborg: '#ff3c38',
+							background: 'var(--background)',
+							surface: 'var(--surface)',
+							card: 'var(--card)',
+							foreground: 'var(--foreground)',
+							muted: 'var(--muted)',
+							'muted-foreground': 'var(--muted-foreground)',
+							border: 'var(--border)',
 						}
 					}
 				}
@@ -69,8 +78,85 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="bg-white dark:bg-dark text-gray-700 dark:text-gray-300 font-['Poppins'] overflow-x-hidden">
+	<body class="text-gray-700 dark:text-gray-300 font-['Poppins'] overflow-x-hidden selection:bg-neon/20 selection:text-neon">
 		<Header />
 		<slot />
+		<script>
+			const CONSTELLATIONS = [
+				{ p: [[20, 60], [40, 40], [60, 45], [80, 35]], e: [[0, 1], [1, 2], [2, 3]] },
+				{ p: [[30, 30], [50, 50], [70, 40], [50, 70], [22, 46]], e: [[0, 1], [1, 2], [1, 3], [3, 4]] },
+				{ p: [[36, 14], [46, 50], [30, 80], [62, 20], [66, 55], [72, 84]], e: [[0, 1], [1, 2], [3, 4], [4, 5]] },
+				{ p: [[30, 50], [50, 34], [70, 50], [50, 66], [50, 50]], e: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 1]] },
+				{ p: [[20, 30], [40, 40], [55, 70], [76, 60], [86, 34], [60, 24]], e: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 1]] },
+				{ p: [[25, 24], [45, 40], [61, 30], [76, 50], [60, 70], [40, 60]], e: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 1]] },
+				{ p: [[24, 55], [50, 44], [76, 55], [50, 70]], e: [[0, 1], [1, 2], [2, 3], [3, 0]] },
+				{ p: [[20, 28], [40, 40], [55, 55], [70, 44], [81, 60], [65, 76], [49, 81]], e: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6]] },
+				{ p: [[25, 24], [45, 45], [65, 34], [71, 60], [45, 70], [30, 54]], e: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 0]] },
+				{ p: [[20, 45], [40, 34], [60, 50], [80, 40], [70, 71], [45, 64]], e: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 1]] },
+				{ p: [[25, 30], [45, 45], [65, 34], [80, 55], [55, 70], [35, 60]], e: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 1]] },
+				{ p: [[25, 35], [45, 50], [30, 65], [70, 40], [80, 60], [60, 75]], e: [[0, 1], [1, 2], [3, 4], [4, 5], [1, 4]] }
+			];
+
+			const SVG_NS = 'http://www.w3.org/2000/svg';
+
+			function buildConstellation(c: { p: number[][]; e: number[][] }) {
+				const svg = document.createElementNS(SVG_NS, 'svg');
+				svg.setAttribute('viewBox', '0 0 100 100');
+				svg.setAttribute('preserveAspectRatio', 'none');
+				svg.classList.add('fx-stars');
+				for (const [a, b] of c.e) {
+					const line = document.createElementNS(SVG_NS, 'line');
+					line.setAttribute('x1', String(c.p[a][0]));
+					line.setAttribute('y1', String(c.p[a][1]));
+					line.setAttribute('x2', String(c.p[b][0]));
+					line.setAttribute('y2', String(c.p[b][1]));
+					line.classList.add('fx-line');
+					svg.appendChild(line);
+				}
+				for (const pt of c.p) {
+					const dot = document.createElementNS(SVG_NS, 'circle');
+					dot.setAttribute('cx', String(pt[0]));
+					dot.setAttribute('cy', String(pt[1]));
+					dot.setAttribute('r', '1.3');
+					dot.classList.add('fx-dot');
+					svg.appendChild(dot);
+				}
+				return svg;
+			}
+
+			function initConstellationHover() {
+				const targets = document.querySelectorAll(
+					'a:not(.carousel-nav-btn), button:not(.carousel-nav-btn):not(.carousel-btn), .project-card, .tech-card, .tech-tag, .carousel-card'
+				);
+				targets.forEach((el) => {
+					const node = el as HTMLElement;
+					if (node.dataset.fx) return;
+					node.dataset.fx = '1';
+					node.classList.add('fx-target');
+
+					node.addEventListener('mouseenter', () => {
+						node.querySelectorAll('.fx-stars').forEach((n) => n.remove());
+						const c = CONSTELLATIONS[Math.floor(Math.random() * CONSTELLATIONS.length)];
+						const svg = buildConstellation(c);
+						node.appendChild(svg);
+						requestAnimationFrame(() => svg.classList.add('show'));
+					});
+
+					node.addEventListener('mouseleave', () => {
+						node.querySelectorAll('.fx-stars').forEach((svg) => {
+							svg.classList.remove('show');
+							window.setTimeout(() => svg.remove(), 300);
+						});
+					});
+				});
+			}
+
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', initConstellationHover);
+			} else {
+				initConstellationHover();
+			}
+			document.addEventListener('astro:page-load', initConstellationHover);
+		</script>
 	</body>
 </html>

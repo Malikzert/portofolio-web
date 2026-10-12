@@ -14,36 +14,34 @@ const { project } = Astro.props;
 
 <Layout title={`${project.title} | Abdul Malik Adz-Dzikri`}>
   <main class="pt-24 min-h-screen">
-    <div class="max-w-6xl mx-auto px-6 py-12">
-      <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gold transition mb-8">
+    <div class="max-w-[1440px] mx-auto px-6 py-12">
+      <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-neon transition mb-8">
         <i class="fas fa-arrow-left"></i>
         <span class="text-sm font-bold uppercase tracking-widest">Back to Home</span>
       </a>
 
-      <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-8 md:p-12 rounded-3xl relative overflow-hidden">
-        <div class="absolute -top-32 -right-32 w-80 h-80 bg-gold/10 blur-[120px] rounded-full"></div>
-        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-blue-500/10 blur-[120px] rounded-full"></div>
+      <div class="bg-black/5 dark:bg-neon/[0.04] border border-black/10 dark:border-neon/20 p-8 md:p-12 [clip-path:polygon(28px_0,100%_0,100%_calc(100%_-_28px),calc(100%_-_28px)_100%,0_100%,0_28px)] relative overflow-hidden">
 
         <div class="relative z-10">
-          <div class="aspect-video rounded-2xl mb-10 overflow-hidden shadow-2xl shadow-gold/5">
+          <div class="aspect-video [clip-path:polygon(18px_0,100%_0,100%_calc(100%_-_18px),calc(100%_-_18px)_100%,0_100%,0_18px)] mb-10 overflow-hidden shadow-2xl shadow-neon/5">
             <img src={project.image} alt={project.title} class="w-full h-full object-cover hover:scale-105 transition duration-700">
           </div>
 
           {project.isNativeApp && (
-            <div class="mb-4 inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+            <div class="mb-4 inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 [clip-path:polygon(8px_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_8px)]">
               <i class="fas fa-microchip text-blue-400 text-xs"></i>
               <span class="text-blue-400 text-xs font-mono">Native Engine Render</span>
             </div>
           )}
 
-          <p class="text-gold text-xs uppercase tracking-widest mb-3">{project.category}</p>
+          <p class="text-neon text-xs uppercase tracking-widest mb-3">{project.category}</p>
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             {project.title}
           </h1>
 
           <div class="flex flex-wrap gap-3 mb-8">
             {project.techStack.map(tech => (
-              <span class="text-xs px-3 py-1.5 border border-black/10 dark:border-white/10 rounded-full uppercase text-gray-600 dark:text-gray-400 font-semibold bg-black/5 dark:bg-white/5">
+              <span class="text-xs px-3 py-1.5 border border-black/10 dark:border-neon/20 [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)] uppercase text-gray-600 dark:text-gray-400 font-semibold bg-black/5 dark:bg-neon/[0.04]">
                 {tech}
               </span>
             ))}
@@ -56,7 +54,7 @@ const { project } = Astro.props;
           {project.gallery && project.gallery.length > 0 && (
             <section class="mb-10">
               <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <i class="fas fa-images text-gold"></i>
+                <i class="fas fa-images text-neon"></i>
                 <span>Gallery</span>
               </h2>
               
@@ -87,7 +85,7 @@ const { project } = Astro.props;
             </section>
           )}
 
-          <div class="flex flex-wrap gap-4 pt-6 border-t border-black/10 dark:border-white/10">
+          <div class="flex flex-wrap gap-4 pt-6 border-t border-black/10 dark:border-neon/20">
             {project.liveLink && project.liveLink !== '#' && (
               <a href={project.liveLink} target="_blank" class="btn">
                 <i class="fas fa-external-link-alt mr-2"></i>
@@ -163,16 +161,16 @@ const { project } = Astro.props;
     position: relative;
     width: 280px;
     aspect-ratio: 9/16;
-    border-radius: 16px;
+    clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 1px rgb(var(--accent-rgb) / 0.18), 0 8px 24px rgba(0,0,0,0.5);
   }
 
   .carousel-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 10px 20px rgb(var(--accent-rgb) / 0.3);
   }
 
   .carousel-img {
@@ -233,15 +231,15 @@ const { project } = Astro.props;
   }
 
   .carousel-nav-btn:hover {
-    background: rgba(245, 230, 168, 0.2);
-    border-color: var(--color-gold, #f5e6a8);
+    background: rgb(var(--accent-rgb) / 0.2);
+    border-color: var(--color-gold, var(--accent));
   }
 
   .btn {
     display: inline-flex;
     align-items: center;
     padding: 12px 24px;
-    background: var(--color-gold, #f5e6a8);
+    background: var(--color-gold, var(--accent));
     color: #000;
     border-radius: 10px;
     font-weight: 600;
@@ -250,7 +248,7 @@ const { project } = Astro.props;
 
   .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(245, 230, 168, 0.3);
+    box-shadow: 0 8px 20px rgb(var(--accent-rgb) / 0.3);
   }
 
   .btn.outline {
@@ -261,6 +259,6 @@ const { project } = Astro.props;
 
   .btn.outline:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: var(--color-gold, #f5e6a8);
+    border-color: var(--color-gold, var(--accent));
   }
 </style>
